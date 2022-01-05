@@ -9,7 +9,7 @@ import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
-    val res = arrayOf("Sim", "Não conte com isso!!", "Talvez", "Com certeza!" "O Google deve saber.")
+    val res = arrayOf("Sim", "Não conte com isso!!", "Talvez", "Com certeza!", "O Google deve saber.", "Não", "E o kiko?")
     val random = Random.Default
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             if (pergunta.text.isEmpty()) {
                 resposta.text = "Pergunte antes..."
             } else {
-                val i = random.nextInt(5)
+                val i = random.nextInt(7)
                 resposta.text = res[i]
             }
         }
