@@ -9,7 +9,7 @@ import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
-    val res = arrayOf("sim", "Não conte com isso!!", "Talvez", "Com certeza!")
+    val res = arrayOf("Sim", "Não conte com isso!!", "Talvez", "Com certeza!" "O Google deve saber.")
     val random = Random.Default
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,9 +25,9 @@ class MainActivity : AppCompatActivity() {
         // Register the onClick listener with the implementation above
         btnEnviar.setOnClickListener {
             if (pergunta.text.isEmpty()) {
-                resposta.text = "Faça uma pergunta."
+                resposta.text = "Pergunte antes..."
             } else {
-                val i = random.nextInt(4)
+                val i = random.nextInt(5)
                 resposta.text = res[i]
             }
         }
